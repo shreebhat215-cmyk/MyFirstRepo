@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Productive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <h1>🌱 Productive</h1>
+
+    <div class="add-task">
+      <input id="taskInput" placeholder="What are you studying?" />
+      <select id="priority">
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+      </select>
+      <button type="button" onclick="addTask()">+</button>
+    </div>
+
+    <div class="stats">
+      <div>⏱ <span id="todayTime">00:00:00</span></div>
+      <div id="streak">🔥 0</div>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <!-- Pomodoro -->
+    <div class="pomodoro">
+  <h3>🍅 Pomodoro</h3>
+
+  <p id="pomoDisplay">25:00</p>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div id="pomoProgress"></div>
+  </div>
+
+  <button type="button" onclick="startPomodoro()">Start</button>
+  <button type="button" onclick="stopPomodoro()">Stop</button>
+  <button type="button" onclick="resetPomodoro()">Reset</button>
+  <script src="script.js"></script>
+</body>
+</html>
